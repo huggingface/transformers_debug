@@ -498,6 +498,9 @@ class BertModelTest(ModelTesterMixin, GenerationTesterMixin, PipelineTesterMixin
             config_and_inputs[0].position_embedding_type = type
             self.model_tester.create_and_check_model(*config_and_inputs)
 
+    def test_foo(self):
+        assert 1 == 1
+
     def test_model_3d_mask_shapes(self):
         config_and_inputs = self.model_tester.prepare_config_and_inputs()
         # manipulate input_mask
